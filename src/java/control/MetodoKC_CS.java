@@ -13,7 +13,7 @@ public class MetodoKC_CS implements CaloriasRequeridas {
 
     @Override
     public double calculo_kc(IndicadoresSalud is) {
-        return is.getPeso() * 35 + is.getPeso() * 0.2;
+        return is.getPeso() * 35 + 0.2;
     }
 
 }

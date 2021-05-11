@@ -28,19 +28,19 @@ public class MetodoBH implements CaloriasRequeridas {
         if (is.getPerson().getSexo() == 'H' && factorActividad == 0) {
             calorias = bmr * 1;
         } else if (is.getPerson().getSexo() == 'H' && factorActividad == 1) {
-            calorias = bmr * (1.1 - 1.2);
+            calorias = bmr * (1.15);
         } else if (is.getPerson().getSexo() == 'H' && factorActividad == 2) {
-            calorias = bmr * (1.3 * 1.4);
+            calorias = bmr * (1.35);
         } else if (is.getPerson().getSexo() == 'H' && factorActividad == 3) {
-            calorias = bmr * (1.4 - 1.5);
+            calorias = bmr * (1.45);
         } else if (is.getPerson().getSexo() == 'M' && factorActividad == 0) {
             calorias = bmr * 1;
         } else if (is.getPerson().getSexo() == 'M' && factorActividad == 1) {
-            calorias = bmr * (1.1 - 1.2);
+            calorias = bmr * (1.15);
         } else if (is.getPerson().getSexo() == 'M' && factorActividad == 2) {
-            calorias = bmr * (1.3 * 1.4);
+            calorias = bmr * (1.35);
         } else if (is.getPerson().getSexo() == 'M' && factorActividad == 3) {
-            calorias = bmr * (1.4 - 1.5);
+            calorias = bmr * (1.45);
         }
         
         return calorias;

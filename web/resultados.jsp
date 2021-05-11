@@ -4,6 +4,7 @@
     Author     : Carlos Loaeza
 --%>
 
+<%@page import="java.text.DecimalFormat"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
     int actividad = (Integer) request.getAttribute("acti");
@@ -43,6 +44,12 @@
             break;
     }
 %>
+
+<%
+    double calorias = (Double) request.getAttribute("calorias");
+    DecimalFormat formato = new DecimalFormat("#.0000");
+    
+%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -59,7 +66,7 @@
         </h3>
         <h3>Tipo de información solicitada: <%= resultado%></h3>
         <h2>Fórmula Utilizada: <%=formula%></h2>
-        <h2>Calorias requeridas: ${calorias}</h2>
+        <h2>Calorias requeridas: <%=formato.format(calorias)%></h2>
     </center>
 </body>
 </html>
