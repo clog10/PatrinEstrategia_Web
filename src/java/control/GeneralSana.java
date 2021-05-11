@@ -29,7 +29,7 @@ public class GeneralSana extends IndicadoresSalud {
 
     @Override
     public double req_kc() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return kcr.calculo_kc(this);
     }
 
     @Override

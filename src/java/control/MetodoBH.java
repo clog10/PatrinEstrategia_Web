@@ -21,11 +21,27 @@ public class MetodoBH implements CaloriasRequeridas {
         double bmr = is.getPeso() * 24;
         double calorias = 0;
 
-        if (is.getPerson().getSexo() == 'H' && is.grasaCorporal() > 10) {
+        if (is.getPerson().getSexo() == 'H' && is.grasaCorporal() >= 10) {
             bmr = bmr * 0.9;
         }
         
-        
+        if (is.getPerson().getSexo() == 'H' && factorActividad == 0) {
+            calorias = bmr * 1;
+        } else if (is.getPerson().getSexo() == 'H' && factorActividad == 1) {
+            calorias = bmr * (1.1 - 1.2);
+        } else if (is.getPerson().getSexo() == 'H' && factorActividad == 2) {
+            calorias = bmr * (1.3 * 1.4);
+        } else if (is.getPerson().getSexo() == 'H' && factorActividad == 3) {
+            calorias = bmr * (1.4 - 1.5);
+        } else if (is.getPerson().getSexo() == 'M' && factorActividad == 0) {
+            calorias = bmr * 1;
+        } else if (is.getPerson().getSexo() == 'M' && factorActividad == 1) {
+            calorias = bmr * (1.1 - 1.2);
+        } else if (is.getPerson().getSexo() == 'M' && factorActividad == 2) {
+            calorias = bmr * (1.3 * 1.4);
+        } else if (is.getPerson().getSexo() == 'M' && factorActividad == 3) {
+            calorias = bmr * (1.4 - 1.5);
+        }
         
         return calorias;
     }

@@ -31,7 +31,7 @@ public class CondicionDetallada extends IndicadoresSalud {
     public double req_kc() {
         return kcr.calculo_kc(this);
     }
-
+    
     @Override
     public double grasaCorporal() {
         double porcentaje=0;

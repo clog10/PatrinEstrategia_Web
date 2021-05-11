@@ -13,6 +13,11 @@ public class Persona {
     private String nombre;
     private char sexo;
 
+    public Persona(String nombre, char sexo) {
+        this.nombre = nombre;
+        this.sexo = sexo;
+    }
+
     public String getNombre() {
         return nombre;
     }
