@@ -18,12 +18,13 @@ public class GeneralSana extends IndicadoresSalud {
 
     @Override
     public double imc() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        estatura = estatura/100;
+        return peso / (estatura * estatura);
     }
 
     @Override
     public double icc() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return cintura/cadera;
     }
 
     @Override
@@ -33,7 +34,13 @@ public class GeneralSana extends IndicadoresSalud {
 
     @Override
     public double grasaCorporal() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        double porcentaje=0;
+        if(person.getSexo()=='M'){
+            porcentaje = 1.39 * imc() + 0.16 * edad - 10.34 * 0 -9;
+        }else if(person.getSexo()=='H'){
+            porcentaje = 1.39 * imc() + 0.16 * edad - 10.34 * 1 -9;
+        }
+        return porcentaje;
     }
 
 }
