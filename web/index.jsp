@@ -74,6 +74,9 @@
                         </td> 
                     </tr>
                     <tr>
+                        <td colspan="2" align="center"><p>* Si tu selección es NO TAN DETALLADA, no importa la actividad física</p></td>
+                    </tr>
+                    <tr>
                         <td align="right">Actividad Física: </td>
                         <td>
                             <select name="actividad">

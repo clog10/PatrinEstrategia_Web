@@ -21,7 +21,7 @@ public class MetodoBH implements CaloriasRequeridas {
         double bmr = is.getPeso() * 24;
         double calorias = 0;
 
-        if (is.getPerson().getSexo() == 'H' && is.grasaCorporal() >= 10) {
+        if (is.getPerson().getSexo() == 'M' && is.grasaCorporal() >= 10) {
             bmr = bmr * 0.9;
         }
         
